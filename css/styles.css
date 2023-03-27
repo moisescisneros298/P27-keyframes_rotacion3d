@@ -1,0 +1,137 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #002B5B;
+}
+body .container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body .container section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+body .container section .card {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 10;
+}
+body .container section .card .box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s ease;
+  z-index: 10;
+}
+body .container section .card:hover .box {
+  transform: rotateY(180deg);
+}
+body .container section .card .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body .container section .card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .container section .card .contentBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #262A56;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+body .container section .card .contentBx div {
+  transform: translateZ(100px);
+  background: linear-gradient(45deg, #159895, #57C5B6);
+  padding: 20px;
+  margin: 0 30px;
+  border-radius: 15px;
+}
+body .container section .card .contentBx div h2 {
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+body .container section .card .contentBx div p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+body .container .bubles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+body .container .bubles span {
+  position: relative;
+  min-width: 20px;
+  height: 20px;
+  background: #57C5B6;
+  box-shadow: 0 0 0 10px #002B5B, 0 0 50px #AA77FF, 0 0 100px #62CDFF;
+  margin: 0 4px;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(75s / var(--i));
+}
+body .container .bubles span:nth-child(even) {
+  background: #C9EEFF;
+  box-shadow: 0 0 0 10px #146C94, 0 0 50px #38A3A5, 0 0 100px #DFF6F0;
+}
+
+@media (max-width: 770px) {
+  body .container {
+    overflow: scroll;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}/*# sourceMappingURL=styles.css.map */
