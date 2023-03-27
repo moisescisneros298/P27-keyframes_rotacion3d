@@ -126,6 +126,11 @@ body .container .bubles span:nth-child(even) {
   body .container {
     overflow: scroll;
   }
+  body .container .bubles {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 }
 @keyframes animate {
   0% {
